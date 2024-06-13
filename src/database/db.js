@@ -1,10 +1,12 @@
-import mongoose from "mongoose";
-import * as dotenv from "dotenv";
+import mongoose from 'mongoose';
+import * as dotenv from 'dotenv';
 
 export const connectDatabase = async () => {
-  mongoose.set("strictQuery", true);
+    mongoose.set('strictQuery', true);
 
-  const apikey = dotenv.config().parsed.NODE_MONGO_API_KEY;
+    const apikey = dotenv.config().parsed.NODE_MONGO_API_KEY;
 
-  return await mongoose.connect(apikey);
+    return await mongoose.connect(apikey);
 };
+
+
